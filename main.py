@@ -496,7 +496,7 @@ async def courses(ctx, user: discord.User = None):
         user_dict["user"] = user
         await ctx.author.send(embed=generate_courses_embed(user_dict))
         await ctx.send(
-            embed=success_embed("You will recieve your courses in your DMs.")
+            embed=success_embed("You have recieved your courses in your DMs.")
         )
 
     else:
@@ -550,7 +550,7 @@ async def classes(ctx, user: discord.User = None):
 
         await ctx.author.send(embed=generate_classes_embed(user_dict))
         await ctx.send(
-            embed=success_embed("You will recieve your classes in your DMs.")
+            embed=success_embed("You have recieved your classes in your DMs.")
         )
 
     else:
@@ -605,7 +605,7 @@ async def compare(ctx, user: discord.User = None):
                         )
         await ctx.send(
             embed=success_embed(
-                "If you share courses with anyone in the server (or the person you mentioned), you will recieve the shared courses in your DMs."
+                "If you share courses with anyone in the server (or the person you mentioned), you have recieved the shared courses in your DMs."
             )
         )
 
