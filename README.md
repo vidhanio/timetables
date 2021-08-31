@@ -10,8 +10,16 @@ Timetables! is a bot that can parse your Woodlands SS timetable PDF and compare 
 
 Set your timetable by uploading it in the same message as the command.
 
-### `tt.compare`
+### `tt.compare [user]`
 
 Tag another member to compare the courses you share with them!
 
 If you do not tag a member, it will compare courses against everyone in the server.
+
+### `tt.classes`
+
+See everyone in each of your classes
+
+### `tt.courses`
+
+See all of your courses

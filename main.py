@@ -264,96 +264,6 @@ def generate_student_info(pdf_url: str):
     return student_info
 
 
-def generate_shared_courses_embed(shared_courses: dict):
-    shared_courses_embed = discord.Embed(
-        title="Courses shared with {}".format(shared_courses[0]["name"]["first_name"]),
-        description="You share {}/16 courses.".format(len(shared_courses)),
-    )
-
-    sem_lists = []
-
-    for semester in range(2):
-        sem_lists.append([])
-        for term in range(2):
-            sem_lists[semester].append("__**Term {}**__".format(term + 1))
-            for week in range(2):
-                sem_lists[semester].append("**Week {}**".format(week + 1))
-                courses_added = 0
-                for course in shared_courses:
-                    if [course["semester"], course["term"], course["week"],] == [
-                        semester,
-                        term,
-                        week,
-                    ]:
-                        sem_lists[semester].append(
-                            "{} ({})".format(
-                                course["course"]["course_code"],
-                                course["course"]["teacher"],
-                            )
-                        )
-                        courses_added += 1
-                sem_lists[semester].extend([""] * (2 - courses_added))
-
-    shared_courses_embed.set_author(
-        name=shared_courses[0]["user"].name,
-        icon_url=shared_courses[0]["user"].avatar_url,
-    )
-    shared_courses_embed.add_field(name="Semester 1", value="\n".join(sem_lists[0]))
-    shared_courses_embed.add_field(name="Semester 2", value="\n".join(sem_lists[1]))
-
-    shared_courses_embed.set_footer(
-        text="Made with ❤️ by Vidhan",
-        icon_url="https://avatars.githubusercontent.com/u/41439633?",
-    )
-
-    return shared_courses_embed
-
-
-def generate_shared_students_embed(user: dict):
-    courses_embed = discord.Embed(
-        title="{}'s Classes".format(user["name"]["first_name"]),
-    )
-
-    for semester in range(2):
-        for term in range(2):
-            for week in range(2):
-                for course in range(2):
-                    if user["courses"][semester][term][week][course]["shared_with"]:
-                        users = "\n".join(
-                            [
-                                "{} ({})".format(
-                                    user_.mention,
-                                    timetables["users"][str(user_.id)]["name"][
-                                        "first_name"
-                                    ],
-                                )
-                                for user_ in user["courses"][semester][term][week][
-                                    course
-                                ]["shared_with"]
-                            ]
-                        )
-                    else:
-                        users = "\u200D"
-                    courses_embed.add_field(
-                        name="{} ({})".format(
-                            user["courses"][semester][term][week][course][
-                                "course_code"
-                            ],
-                            user["courses"][semester][term][week][course]["teacher"],
-                        ),
-                        value=users,
-                    )
-    courses_embed.set_author(
-        name=user["user"].name,
-        icon_url=user["user"].avatar_url,
-    )
-    courses_embed.set_footer(
-        text="Made with ❤️ by Vidhan",
-        icon_url="https://avatars.githubusercontent.com/u/41439633?",
-    )
-    return courses_embed
-
-
 def generate_courses_embed(user: dict):
 
     courses_embed = discord.Embed(
@@ -391,6 +301,96 @@ def generate_courses_embed(user: dict):
     )
 
     return courses_embed
+
+
+def generate_classes_embed(user: dict):
+    classes_embed = discord.Embed(
+        title="{}'s Classes".format(user["name"]["first_name"]),
+    )
+
+    for semester in range(2):
+        for term in range(2):
+            for week in range(2):
+                for course in range(2):
+                    if user["courses"][semester][term][week][course]["shared_with"]:
+                        users = "\n".join(
+                            [
+                                "{} ({})".format(
+                                    user_.mention,
+                                    timetables["users"][str(user_.id)]["name"][
+                                        "first_name"
+                                    ],
+                                )
+                                for user_ in user["courses"][semester][term][week][
+                                    course
+                                ]["shared_with"]
+                            ]
+                        )
+                    else:
+                        users = "\u200D"
+                    classes_embed.add_field(
+                        name="{} ({})".format(
+                            user["courses"][semester][term][week][course][
+                                "course_code"
+                            ],
+                            user["courses"][semester][term][week][course]["teacher"],
+                        ),
+                        value=users,
+                    )
+    classes_embed.set_author(
+        name=user["user"].name,
+        icon_url=user["user"].avatar_url,
+    )
+    classes_embed.set_footer(
+        text="Made with ❤️ by Vidhan",
+        icon_url="https://avatars.githubusercontent.com/u/41439633?",
+    )
+    return classes_embed
+
+
+def generate_compare_embed(shared_courses: dict):
+    compare_embed = discord.Embed(
+        title="Courses shared with {}".format(shared_courses[0]["name"]["first_name"]),
+        description="You share {}/16 courses.".format(len(shared_courses)),
+    )
+
+    sem_lists = []
+
+    for semester in range(2):
+        sem_lists.append([])
+        for term in range(2):
+            sem_lists[semester].append("__**Term {}**__".format(term + 1))
+            for week in range(2):
+                sem_lists[semester].append("**Week {}**".format(week + 1))
+                courses_added = 0
+                for course in shared_courses:
+                    if [course["semester"], course["term"], course["week"],] == [
+                        semester,
+                        term,
+                        week,
+                    ]:
+                        sem_lists[semester].append(
+                            "{} ({})".format(
+                                course["course"]["course_code"],
+                                course["course"]["teacher"],
+                            )
+                        )
+                        courses_added += 1
+                sem_lists[semester].extend([""] * (2 - courses_added))
+
+    compare_embed.set_author(
+        name=shared_courses[0]["user"].name,
+        icon_url=shared_courses[0]["user"].avatar_url,
+    )
+    compare_embed.add_field(name="Semester 1", value="\n".join(sem_lists[0]))
+    compare_embed.add_field(name="Semester 2", value="\n".join(sem_lists[1]))
+
+    compare_embed.set_footer(
+        text="Made with ❤️ by Vidhan",
+        icon_url="https://avatars.githubusercontent.com/u/41439633?",
+    )
+
+    return compare_embed
 
 
 def error_embed(text: str):
@@ -484,59 +484,26 @@ async def unset(ctx, user: discord.User = None):
 
 
 @bot.command()
-async def compare(ctx, user: discord.User = None):
-    if str(ctx.author.id) in timetables["users"].keys():
-        if user:
-            users = [user]
-        else:
-            users = [
-                await bot.fetch_user(user_id) for user_id in timetables["users"].keys()
-            ]
+async def courses(ctx, user: discord.User = None):
 
-        for user in users:
-            if str(user.id) in timetables["users"].keys():
-                shared_courses = []
-                for semester in range(2):
-                    for term in range(2):
-                        for week in range(2):
-                            for course in range(2):
-                                if (
-                                    timetables["users"][str(ctx.author.id)]["courses"][
-                                        semester
-                                    ][term][week][course]["course_code"]
-                                    == timetables["users"][str(user.id)]["courses"][
-                                        semester
-                                    ][term][week][course]["course_code"]
-                                ):
-                                    shared_courses.append(
-                                        {
-                                            "user": user,
-                                            "name": timetables["users"][str(user.id)][
-                                                "name"
-                                            ],
-                                            "semester": semester,
-                                            "term": term,
-                                            "week": week,
-                                            "course": timetables["users"][
-                                                str(ctx.author.id)
-                                            ]["courses"][semester][term][week][course],
-                                        }
-                                    )
-                if shared_courses:
-                    if user.id != ctx.author.id:
-                        await ctx.author.send(
-                            embed=generate_shared_courses_embed(shared_courses)
-                        )
+    # Check if a user was passed.
+    if not user:
+        user = await bot.fetch_user(ctx.author.id)
+
+    if str(user.id) in timetables["users"].keys():
+
+        user_dict = copy.deepcopy(timetables["users"][str(user.id)])
+        user_dict["user"] = user
+        await ctx.author.send(embed=generate_courses_embed(user_dict))
         await ctx.send(
-            embed=success_embed(
-                "If you share courses with anyone in the server (or the person you mentioned), you will recieve the shared courses in your DMs."
-            )
+            embed=success_embed("You will recieve your courses in your DMs.")
         )
 
     else:
         await ctx.send(
             embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
         )
+        return
 
 
 @bot.command()
@@ -581,7 +548,7 @@ async def classes(ctx, user: discord.User = None):
                                         "shared_with"
                                     ].append(user_)
 
-        await ctx.author.send(embed=generate_shared_students_embed(user_dict))
+        await ctx.author.send(embed=generate_classes_embed(user_dict))
         await ctx.send(
             embed=success_embed("You will recieve your classes in your DMs.")
         )
@@ -593,26 +560,59 @@ async def classes(ctx, user: discord.User = None):
 
 
 @bot.command()
-async def courses(ctx, user: discord.User = None):
+async def compare(ctx, user: discord.User = None):
+    if str(ctx.author.id) in timetables["users"].keys():
+        if user:
+            users = [user]
+        else:
+            users = [
+                await bot.fetch_user(user_id) for user_id in timetables["users"].keys()
+            ]
 
-    # Check if a user was passed.
-    if not user:
-        user = await bot.fetch_user(ctx.author.id)
-
-    if str(user.id) in timetables["users"].keys():
-
-        user_dict = copy.deepcopy(timetables["users"][str(user.id)])
-        user_dict["user"] = user
-        await ctx.author.send(embed=generate_courses_embed(user_dict))
+        for user in users:
+            if str(user.id) in timetables["users"].keys():
+                shared_courses = []
+                for semester in range(2):
+                    for term in range(2):
+                        for week in range(2):
+                            for course in range(2):
+                                if (
+                                    timetables["users"][str(ctx.author.id)]["courses"][
+                                        semester
+                                    ][term][week][course]["course_code"]
+                                    == timetables["users"][str(user.id)]["courses"][
+                                        semester
+                                    ][term][week][course]["course_code"]
+                                ):
+                                    shared_courses.append(
+                                        {
+                                            "user": user,
+                                            "name": timetables["users"][str(user.id)][
+                                                "name"
+                                            ],
+                                            "semester": semester,
+                                            "term": term,
+                                            "week": week,
+                                            "course": timetables["users"][
+                                                str(ctx.author.id)
+                                            ]["courses"][semester][term][week][course],
+                                        }
+                                    )
+                if shared_courses:
+                    if user.id != ctx.author.id:
+                        await ctx.author.send(
+                            embed=generate_compare_embed(shared_courses)
+                        )
         await ctx.send(
-            embed=success_embed("You will recieve your courses in your DMs.")
+            embed=success_embed(
+                "If you share courses with anyone in the server (or the person you mentioned), you will recieve the shared courses in your DMs."
+            )
         )
 
     else:
         await ctx.send(
             embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
         )
-        return
 
 
 bot.run(BOT_TOKEN)
