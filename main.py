@@ -1,5 +1,4 @@
-from datetime import time
-import requests, io, discord, json, re, pprint, copy
+import requests, io, discord, json, re, copy
 from discord.ext import commands
 from os.path import join, dirname
 from settings import *
