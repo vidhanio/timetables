@@ -174,5 +174,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-student_info.json
+timetables.json
 test.py
