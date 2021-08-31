@@ -1,4 +1,4 @@
-import requests, io, discord, json, re, pprint
+import requests, io, discord, json, re, pprint, copy
 from discord.ext import commands
 from os.path import join, dirname
 from settings import *
@@ -99,7 +99,7 @@ def generate_student_info(pdf_url: str):
     # Find rooms by matching by matching regex pattern.
     rooms = list(
         filter(
-            re.compile("^[0-9][0-9][0-9]$").match,
+            re.compile("^([0-9][0-9][0-9]|GYM)$").match,
             courses_list,
         )
     )
@@ -277,6 +277,7 @@ def generate_shared_courses_embed(shared_courses: dict):
             sem_lists[semester].append("__**Term {}**__".format(term + 1))
             for week in range(2):
                 sem_lists[semester].append("**Week {}**".format(week + 1))
+                courses_added = 0
                 for course in shared_courses:
                     if [course["semester"], course["term"], course["week"],] == [
                         semester,
@@ -289,6 +290,8 @@ def generate_shared_courses_embed(shared_courses: dict):
                                 course["course"]["teacher"],
                             )
                         )
+                        courses_added += 1
+                sem_lists[semester].extend([""] * (2 - courses_added))
 
     shared_courses_embed.set_author(
         name=shared_courses[0]["member"].name,
@@ -303,6 +306,45 @@ def generate_shared_courses_embed(shared_courses: dict):
     )
 
     return shared_courses_embed
+
+
+def generate_shared_students_embed(courses: dict):
+    courses_embed = discord.Embed(
+        title="Courses",
+    )
+
+    for semester in range(2):
+        for term in range(2):
+            for week in range(2):
+                for course in range(2):
+                    if courses["courses"][semester][term][week][course]["shared_with"]:
+                        members = "\n".join(
+                            [
+                                "{} ({})".format(
+                                    member.mention,
+                                    timetables["users"][str(member.id)]["name"][
+                                        "first_name"
+                                    ],
+                                )
+                                for member in courses["courses"][semester][term][week][
+                                    course
+                                ]["shared_with"]
+                                if member.id != courses
+                            ]
+                        )
+                    else:
+                        members = "‍"
+                    courses_embed.add_field(
+                        name="{} ({})".format(
+                            courses["courses"][semester][term][week][course][
+                                "course_code"
+                            ],
+                            courses["courses"][semester][term][week][course]["teacher"],
+                        ),
+                        value=members,
+                        inline=False,
+                    )
+    return courses_embed
 
 
 def error_embed(text: str):
@@ -321,9 +363,9 @@ intents = discord.Intents.all()
 # Set prefix.
 bot = commands.Bot(command_prefix="tt.", intents=intents)
 
-# Read from student_info.json to initialize info.
-with open(join(dirname(__file__), "student_info.json"), "r") as student_info_json:
-    student_info = json.load(student_info_json)
+# Read from timetables.json to initialize info.
+with open(join(dirname(__file__), "timetables.json"), "r") as timetables_json:
+    timetables = json.load(timetables_json)
 
 
 # tt.set: Set your timetable by uploading it in the same message as the command.
@@ -333,7 +375,7 @@ async def _set(ctx, member: discord.Member = None):
     # Check if a member was passed.
     if member:
         if ctx.author.id != 277507281652940800:
-            await ctx.send("Error: No permissions. :angry:")
+            await ctx.send(embed=error_embed("You aren't Vidhan, you can't do that."))
     else:
         member = ctx.author
 
@@ -343,63 +385,89 @@ async def _set(ctx, member: discord.Member = None):
 
         # Check if message has .pdf file extension.
         if timetable_url.lower()[-4:] != ".pdf":
-            await ctx.send("Error: Attachment is not PDF. :confused:")
+            await ctx.send(embed=error_embed("Attachment is not a PDF."))
             return
 
         # Check if pdf is valid.
         elif not validate_pdf(timetable_url):
-            await ctx.send("Error: PDF is not valid. :confused:")
+            await ctx.send(embed=error_embed("PDF is not valid."))
             return
 
-        # Generate student info and store it in dictionary, as well as writing it to the student_info.json.
+        # Generate student info and store it in dictionary, as well as writing it to the timetables.json.
         else:
-            student_info["users"][str(member.id)] = generate_student_info(timetable_url)
+            timetables["users"][str(member.id)] = generate_student_info(timetable_url)
 
             with open(
-                join(dirname(__file__), "student_info.json"), "w"
-            ) as student_info_json:
-                json.dump(student_info, student_info_json)
+                join(dirname(__file__), "timetables.json"), "w"
+            ) as timetables_json:
+                json.dump(timetables, timetables_json)
 
-            await ctx.send("Success: Timetable set! :smile:")
+            await ctx.send(embed=success_embed("Timetable set."))
 
     else:
-        await ctx.send("Error: No attachments. :confused:")
+        await ctx.send(embed=error_embed("No attachments found."))
+        return
+
+
+@bot.command()
+async def unset(ctx, member: discord.Member = None):
+
+    # Check if a member was passed.
+    if member:
+        if ctx.author.id != 277507281652940800:
+            await ctx.send(embed=error_embed("You aren't Vidhan, you can't do that."))
+    else:
+        member = ctx.author
+
+    if str(member.id) in timetables["users"].keys():
+
+        timetables["users"].pop(str(member.id))
+
+        with open(join(dirname(__file__), "timetables.json"), "w") as timetables_json:
+            json.dump(timetables, timetables_json)
+
+        await ctx.send(embed=success_embed("Timetable unset."))
+
+    else:
+        await ctx.send(
+            embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
+        )
         return
 
 
 @bot.command()
 async def compare(ctx, member: discord.Member = None):
-    if str(ctx.author.id) in student_info["users"].keys():
+    if str(ctx.author.id) in timetables["users"].keys():
         if member:
             members = [member]
         else:
             members = ctx.guild.members
 
         for member in members:
-            if str(member.id) in student_info["users"].keys():
+            if str(member.id) in timetables["users"].keys():
                 shared_courses = []
                 for semester in range(2):
                     for term in range(2):
                         for week in range(2):
                             for course in range(2):
                                 if (
-                                    student_info["users"][str(ctx.author.id)][
-                                        "courses"
-                                    ][semester][term][week][course]
-                                    == student_info["users"][str(member.id)]["courses"][
+                                    timetables["users"][str(ctx.author.id)]["courses"][
                                         semester
-                                    ][term][week][course]
+                                    ][term][week][course]["course_code"]
+                                    == timetables["users"][str(member.id)]["courses"][
+                                        semester
+                                    ][term][week][course]["course_code"]
                                 ):
                                     shared_courses.append(
                                         {
                                             "member": member,
-                                            "name": student_info["users"][
-                                                str(member.id)
-                                            ]["name"],
+                                            "name": timetables["users"][str(member.id)][
+                                                "name"
+                                            ],
                                             "semester": semester,
                                             "term": term,
                                             "week": week,
-                                            "course": student_info["users"][
+                                            "course": timetables["users"][
                                                 str(ctx.author.id)
                                             ]["courses"][semester][term][week][course],
                                         }
@@ -409,11 +477,54 @@ async def compare(ctx, member: discord.Member = None):
                         await ctx.author.send(
                             embed=generate_shared_courses_embed(shared_courses)
                         )
-                await ctx.send(
-                    embed=success_embed(
-                        "If you share courses with anyone in the server, you will recieve the shared courses in your DM."
-                    )
-                )
+        await ctx.send(
+            embed=success_embed(
+                "If you share courses with anyone in the server (or the person you mentioned), you will recieve the shared courses in your DMs."
+            )
+        )
+
+    else:
+        await ctx.send(
+            embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
+        )
+
+
+@bot.command()
+async def compare_courses(ctx):
+
+    if str(ctx.author.id) in timetables["users"].keys():
+        courses = copy.deepcopy(timetables["users"][str(ctx.author.id)])
+        for member in ctx.guild.members:
+            if str(member.id) in timetables["users"].keys():
+                for semester in range(2):
+                    for term in range(2):
+                        for week in range(2):
+                            for course in range(2):
+                                if (
+                                    "shared_with"
+                                    not in courses["courses"][semester][term][week][
+                                        course
+                                    ].keys()
+                                ):
+                                    courses["courses"][semester][term][week][course][
+                                        "shared_with"
+                                    ] = []
+                                if (
+                                    timetables["users"][str(ctx.author.id)]["courses"][
+                                        semester
+                                    ][term][week][course]["course_code"]
+                                    == timetables["users"][str(member.id)]["courses"][
+                                        semester
+                                    ][term][week][course]["course_code"]
+                                ):
+                                    courses["courses"][semester][term][week][course][
+                                        "shared_with"
+                                    ].append(member)
+
+        await ctx.author.send(embed=generate_shared_students_embed(courses))
+        await ctx.send(
+            embed=success_embed("You will recieve the shared courses in your DMs.")
+        )
 
     else:
         await ctx.send(
