@@ -70,7 +70,19 @@ def generate_student_info(pdf_url: str):
 
     # Filter list to remove useless text.
     courses_list = list(filter(validate_element, courses_element.split()))
-    courses_list = [i.rstrip(",") for i in courses_list]
+    courses_list = list(
+        filter(
+            lambda a: not re.compile("^[A-Z]$").match(a),
+            courses_list,
+        )
+    )
+
+    courses_list = [
+        words.rstrip(",")
+        for segments in courses_list
+        for words in segments.split(",")
+        if words
+    ]
 
     student_number = courses_list.pop(0)
 
@@ -83,12 +95,6 @@ def generate_student_info(pdf_url: str):
     )
 
     # Find first initials by matching regex pattern.
-    first_initials = list(
-        filter(
-            re.compile("^[A-Z]$").match,
-            courses_list,
-        )
-    )
 
     # Find rooms by matching by matching regex pattern.
     rooms = list(
@@ -100,19 +106,14 @@ def generate_student_info(pdf_url: str):
 
     # Last names are tricky because they do not match a pattern.
     # Instead, we just subtract all the already found information, and we are left with the last names.
-    last_names = [
-        item
-        for item in courses_list
-        if item not in course_codes + first_initials + rooms
-    ]
+    names = [item for item in courses_list if item not in course_codes + rooms]
 
     # If there are any study periods, add that information to all of the lists.
-    study_indexes = [i for i, x in enumerate(last_names) if x == "STUDY"]
+    study_indexes = [i for i, x in enumerate(names) if x == "STUDY"]
 
     for i in study_indexes:
         course_codes.insert(i, "STUDY")
-        first_initials.insert(i, "S")
-        last_names[i] = "Study"
+        names[i] = "Study"
         rooms.insert(i, 0)
 
     # This represents the order of the courses in relation to how they were parsed.
@@ -121,8 +122,7 @@ def generate_student_info(pdf_url: str):
     # Order elements in correct order defined above.
     courses_dict = {
         "course_codes": [course_codes[i] for i in order],
-        "first_initials": [first_initials[i] for i in order],
-        "last_names": [last_names[i] for i in order],
+        "names": [names[i] for i in order],
         "rooms": [rooms[i] for i in order],
     }
 
@@ -136,24 +136,24 @@ def generate_student_info(pdf_url: str):
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
@@ -162,24 +162,24 @@ def generate_student_info(pdf_url: str):
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
@@ -190,24 +190,24 @@ def generate_student_info(pdf_url: str):
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
@@ -216,24 +216,24 @@ def generate_student_info(pdf_url: str):
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
                     [
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                         {
                             "course_code": "",
-                            "teacher": {"first_initial": "", "last_name": ""},
+                            "teacher": "",
                             "room": 0,
                         },
                     ],
@@ -251,12 +251,9 @@ def generate_student_info(pdf_url: str):
                     student_info["courses"][semester][term][week][course][
                         "course_code"
                     ] = courses_dict["course_codes"][counter]
-                    student_info["courses"][semester][term][week][course]["teacher"][
-                        "first_initial"
-                    ] = courses_dict["first_initials"][counter]
-                    student_info["courses"][semester][term][week][course]["teacher"][
-                        "last_name"
-                    ] = courses_dict["last_names"][counter]
+                    student_info["courses"][semester][term][week][course][
+                        "teacher"
+                    ] = courses_dict["names"][counter]
                     student_info["courses"][semester][term][week][course][
                         "room"
                     ] = courses_dict["rooms"][counter]
@@ -264,6 +261,58 @@ def generate_student_info(pdf_url: str):
                     counter += 1
 
     return student_info
+
+
+def generate_shared_courses_embed(shared_courses: dict):
+    shared_courses_embed = discord.Embed(
+        title="Courses shared with {}".format(shared_courses[0]["name"]["first_name"]),
+        description="You share {}/16 courses.".format(len(shared_courses)),
+    )
+
+    sem_lists = []
+
+    for semester in range(2):
+        sem_lists.append([])
+        for term in range(2):
+            sem_lists[semester].append("__**Term {}**__".format(term + 1))
+            for week in range(2):
+                sem_lists[semester].append("**Week {}**".format(week + 1))
+                for course in shared_courses:
+                    if [course["semester"], course["term"], course["week"],] == [
+                        semester,
+                        term,
+                        week,
+                    ]:
+                        sem_lists[semester].append(
+                            "{} ({})".format(
+                                course["course"]["course_code"],
+                                course["course"]["teacher"],
+                            )
+                        )
+
+    shared_courses_embed.set_author(
+        name=shared_courses[0]["member"].name,
+        icon_url=shared_courses[0]["member"].avatar_url,
+    )
+    shared_courses_embed.add_field(name="Semester 1", value="\n".join(sem_lists[0]))
+    shared_courses_embed.add_field(name="Semester 2", value="\n".join(sem_lists[1]))
+
+    shared_courses_embed.set_footer(
+        text="Made with ❤️ by Vidhan",
+        icon_url="https://avatars.githubusercontent.com/u/41439633?",
+    )
+
+    return shared_courses_embed
+
+
+def error_embed(text: str):
+    error = discord.Embed(title="Error! :confused:", description=text, colour=0xF7768E)
+    return error
+
+
+def success_embed(text: str):
+    success = discord.Embed(title="Success! :smile:", description=text, colour=0x73DACA)
+    return success
 
 
 # Allow bot to have all intents.
@@ -322,6 +371,11 @@ async def _set(ctx, member: discord.Member = None):
 async def compare(ctx, member: discord.Member = None):
     if str(ctx.author.id) in student_info["users"].keys():
         if member:
+            members = [member]
+        else:
+            members = ctx.guild.members
+
+        for member in members:
             if str(member.id) in student_info["users"].keys():
                 shared_courses = []
                 for semester in range(2):
@@ -338,97 +392,32 @@ async def compare(ctx, member: discord.Member = None):
                                 ):
                                     shared_courses.append(
                                         {
-                                            "semester": semester + 1,
-                                            "term": term + 1,
-                                            "week": week + 1,
+                                            "member": member,
+                                            "name": student_info["users"][
+                                                str(member.id)
+                                            ]["name"],
+                                            "semester": semester,
+                                            "term": term,
+                                            "week": week,
                                             "course": student_info["users"][
                                                 str(ctx.author.id)
                                             ]["courses"][semester][term][week][course],
                                         }
                                     )
                 if shared_courses:
-                    shared_courses_string = (
-                        "Congratulations, You share the following courses:\n"
-                    )
-                    for course in shared_courses:
-                        shared_courses_string += (
-                            "Semester {}, Week {}: {} ({})\n".format(
-                                course["semester"],
-                                course["week"],
-                                course["course"]["course_code"],
-                                course["course"]["teacher"]["last_name"],
-                            )
+                    if member.id != ctx.author.id:
+                        await ctx.author.send(
+                            embed=generate_shared_courses_embed(shared_courses)
                         )
-                    await ctx.send(shared_courses_string)
-                else:
-                    await ctx.send("Unfortunately, you don't share any courses.")
-            else:
-                ctx.send(
-                    "Error: {}'s timetable is not set. Ask them to use `tt.set` to set it. :confused:".format(
-                        member.name
+                await ctx.send(
+                    embed=success_embed(
+                        "If you share courses with anyone in the server, you will recieve the shared courses in your DM."
                     )
                 )
-        else:
-            shared_courses_string = (
-                "Congratulations, You share the following courses:\n"
-            )
-            for member in ctx.guild.members:
-                if str(member.id) in student_info["users"].keys():
-                    shared_courses = []
-                    for semester in range(2):
-                        for term in range(2):
-                            for week in range(2):
-                                for course in range(2):
-                                    if (
-                                        student_info["users"][str(ctx.author.id)][
-                                            "courses"
-                                        ][semester][term][week][course]
-                                        == student_info["users"][str(member.id)][
-                                            "courses"
-                                        ][semester][term][week][course]
-                                    ):
-                                        shared_courses.append(
-                                            {
-                                                "semester": semester + 1,
-                                                "term": term + 1,
-                                                "week": week + 1,
-                                                "course": student_info["users"][
-                                                    str(ctx.author.id)
-                                                ]["courses"][semester][term][week][
-                                                    course
-                                                ],
-                                                "name": student_info["users"][
-                                                    str(member.id)
-                                                ]["name"],
-                                            }
-                                        )
-                    if shared_courses:
-                        if member.id != ctx.author.id:
-                            shared_courses_string += "\n**{} ({})**:\n".format(
-                                member.name, shared_courses[0]["name"]["first_name"]
-                            )
-                            for course in shared_courses:
-                                shared_courses_string += (
-                                    "Semester {}, Week {}: {} ({})\n".format(
-                                        course["semester"],
-                                        course["week"],
-                                        course["course"]["course_code"],
-                                        course["course"]["teacher"]["last_name"],
-                                    )
-                                )
-            if (
-                shared_courses_string
-                == "Congratulations, You share the following courses:\n"
-            ):
-                await ctx.send(
-                    "Unfortunately, you don't share courses with anyone in this server who has set their timetable."
-                )
-            else:
-                await ctx.send(shared_courses_string)
 
     else:
         await ctx.send(
-            "Error: Your timetable is not set, use `tt.set` to set it. :confused:"
+            embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
         )
 
 
