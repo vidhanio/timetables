@@ -1,4 +1,4 @@
-import requests, io, discord, json, re
+import requests, io, discord, json, re, pprint
 from discord.ext import commands
 from os.path import join, dirname
 from settings import *
@@ -41,6 +41,7 @@ def generate_student_info(pdf_url: str):
     response = requests.get(pdf_url)
     pdf = io.BytesIO(response.content)
 
+    name_found = False
     for page_layout in extract_pages(pdf):
         for element in page_layout:
             if (
@@ -48,10 +49,16 @@ def generate_student_info(pdf_url: str):
                 and "Semester 1" in element.get_text()
             ):
                 courses_element = element.get_text()
+            elif name_found == False:
+                name = {
+                    "first_name": element.get_text().split(", ")[1].strip(),
+                    "last_name": element.get_text().split(", ")[0].strip(),
+                }
+                name_found = True
 
     courses_list = list(filter(validate_element, courses_element.split()))
     courses_list = [i.rstrip(",") for i in courses_list]
-    pupil_number = courses_list.pop(0)
+    student_number = courses_list.pop(0)
 
     course_codes = list(
         filter(
@@ -97,7 +104,8 @@ def generate_student_info(pdf_url: str):
     }
 
     student_info = {
-        "pupil_number": pupil_number,
+        "name": name,
+        "student_number": student_number,
         "courses": [
             [
                 [
@@ -389,11 +397,16 @@ async def compare(ctx, member: discord.Member = None):
                                                 ]["courses"][semester][term][week][
                                                     course
                                                 ],
+                                                "name": student_info["users"][
+                                                    str(member.id)
+                                                ]["name"],
                                             }
                                         )
                     if shared_courses:
                         if member.id != ctx.author.id:
-                            shared_courses_string += "\n**{}**:\n".format(member.name)
+                            shared_courses_string += "\n**{} ({})**:\n".format(
+                                member.name, shared_courses[0]["name"]["first_name"]
+                            )
                             for course in shared_courses:
                                 shared_courses_string += (
                                     "Semester {}, Week {}: {} ({})\n".format(
