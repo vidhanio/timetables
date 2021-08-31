@@ -309,46 +309,87 @@ def generate_shared_courses_embed(shared_courses: dict):
     return shared_courses_embed
 
 
-def generate_shared_students_embed(courses: dict):
+def generate_shared_students_embed(user: dict):
     courses_embed = discord.Embed(
-        title="Classes",
+        title="{}'s Classes".format(user["name"]["first_name"]),
     )
 
     for semester in range(2):
         for term in range(2):
             for week in range(2):
                 for course in range(2):
-                    if courses["courses"][semester][term][week][course]["shared_with"]:
+                    if user["courses"][semester][term][week][course]["shared_with"]:
                         users = "\n".join(
                             [
                                 "{} ({})".format(
-                                    user.mention,
-                                    timetables["users"][str(user.id)]["name"][
+                                    user_.mention,
+                                    timetables["users"][str(user_.id)]["name"][
                                         "first_name"
                                     ],
                                 )
-                                for user in courses["courses"][semester][term][week][
+                                for user_ in user["courses"][semester][term][week][
                                     course
                                 ]["shared_with"]
-                                if user.id != courses
                             ]
                         )
                     else:
-                        users = "‍"
+                        users = "\u200D"
                     courses_embed.add_field(
                         name="{} ({})".format(
-                            courses["courses"][semester][term][week][course][
+                            user["courses"][semester][term][week][course][
                                 "course_code"
                             ],
-                            courses["courses"][semester][term][week][course]["teacher"],
+                            user["courses"][semester][term][week][course]["teacher"],
                         ),
                         value=users,
                     )
+    courses_embed.set_author(
+        name=user["user"].name,
+        icon_url=user["user"].avatar_url,
+    )
+    courses_embed.set_footer(
+        text="Made with ❤️ by Vidhan",
+        icon_url="https://avatars.githubusercontent.com/u/41439633?",
+    )
+    return courses_embed
+
+
+def generate_courses_embed(user: dict):
+
+    courses_embed = discord.Embed(
+        title="{}'s Courses".format(user["name"]["first_name"]),
+    )
+
+    sem_lists = []
+
+    for semester in range(2):
+        sem_lists.append([])
+        for term in range(2):
+            sem_lists[semester].append("__**Term {}**__".format(term + 1))
+            for week in range(2):
+                sem_lists[semester].append("**Week {}**".format(week + 1))
+                for course in range(2):
+                    sem_lists[semester].append(
+                        "{} ({})".format(
+                            user["courses"][semester][term][week][course][
+                                "course_code"
+                            ],
+                            user["courses"][semester][term][week][course]["teacher"],
+                        )
+                    )
+
+    courses_embed.set_author(
+        name=user["user"].name,
+        icon_url=user["user"].avatar_url,
+    )
+    courses_embed.add_field(name="Semester 1", value="\n".join(sem_lists[0]))
+    courses_embed.add_field(name="Semester 2", value="\n".join(sem_lists[1]))
 
     courses_embed.set_footer(
         text="Made with ❤️ by Vidhan",
         icon_url="https://avatars.githubusercontent.com/u/41439633?",
     )
+
     return courses_embed
 
 
@@ -381,6 +422,7 @@ async def _set(ctx, user: discord.User = None):
     if user:
         if ctx.author.id != 277507281652940800:
             await ctx.send(embed=error_embed("You aren't Vidhan, you can't do that."))
+            return
     else:
         user = ctx.author
 
@@ -424,6 +466,7 @@ async def unset(ctx, user: discord.User = None):
     else:
         user = ctx.author
 
+    # Check if user's timetable is set.
     if str(user.id) in timetables["users"].keys():
 
         timetables["users"].pop(str(user.id))
@@ -497,11 +540,19 @@ async def compare(ctx, user: discord.User = None):
 
 
 @bot.command()
-async def classes(ctx):
+async def classes(ctx, user: discord.User = None):
 
-    if str(ctx.author.id) in timetables["users"].keys():
-        courses = copy.deepcopy(timetables["users"][str(ctx.author.id)])
-        for user in [
+    # Check if a user was passed.
+    if user:
+        if ctx.author.id != 277507281652940800:
+            await ctx.send(embed=error_embed("You aren't Vidhan, you can't do that."))
+    else:
+        user = ctx.author
+
+    if str(user.id) in timetables["users"].keys():
+        user_dict = copy.deepcopy(timetables["users"][str(user.id)])
+        user_dict["user"] = user
+        for user_ in [
             await bot.fetch_user(user_id) for user_id in timetables["users"].keys()
         ]:
             if str(user.id) in timetables["users"].keys():
@@ -511,26 +562,26 @@ async def classes(ctx):
                             for course in range(2):
                                 if (
                                     "shared_with"
-                                    not in courses["courses"][semester][term][week][
+                                    not in user_dict["courses"][semester][term][week][
                                         course
                                     ].keys()
                                 ):
-                                    courses["courses"][semester][term][week][course][
+                                    user_dict["courses"][semester][term][week][course][
                                         "shared_with"
                                     ] = []
                                 if (
-                                    timetables["users"][str(ctx.author.id)]["courses"][
+                                    timetables["users"][str(user.id)]["courses"][
                                         semester
                                     ][term][week][course]["course_code"]
-                                    == timetables["users"][str(user.id)]["courses"][
+                                    == timetables["users"][str(user_.id)]["courses"][
                                         semester
                                     ][term][week][course]["course_code"]
                                 ):
-                                    courses["courses"][semester][term][week][course][
+                                    user_dict["courses"][semester][term][week][course][
                                         "shared_with"
-                                    ].append(user)
+                                    ].append(user_)
 
-        await ctx.author.send(embed=generate_shared_students_embed(courses))
+        await ctx.author.send(embed=generate_shared_students_embed(user_dict))
         await ctx.send(
             embed=success_embed("You will recieve your classes in your DMs.")
         )
@@ -539,6 +590,29 @@ async def classes(ctx):
         await ctx.send(
             embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
         )
+
+
+@bot.command()
+async def courses(ctx, user: discord.User = None):
+
+    # Check if a user was passed.
+    if not user:
+        user = await bot.fetch_user(ctx.author.id)
+
+    if str(user.id) in timetables["users"].keys():
+
+        user_dict = copy.deepcopy(timetables["users"][str(user.id)])
+        user_dict["user"] = user
+        await ctx.author.send(embed=generate_courses_embed(user_dict))
+        await ctx.send(
+            embed=success_embed("You will recieve your courses in your DMs.")
+        )
+
+    else:
+        await ctx.send(
+            embed=error_embed("Your timetable is not set. Use `tt.set` to set it.")
+        )
+        return
 
 
 bot.run(BOT_TOKEN)
