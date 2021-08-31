@@ -40,7 +40,6 @@ def validate_element(element: str):
         return False
 
     else:
-
         return True
 
 
