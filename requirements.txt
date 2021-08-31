@@ -11,6 +11,7 @@ idna==3.2
 multidict==5.1.0
 pdfminer.six==20201018
 pycparser==2.20
+python-dotenv==0.19.0
 requests==2.26.0
 sortedcontainers==2.4.0
 typing-extensions==3.10.0.2
