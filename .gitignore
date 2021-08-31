@@ -175,3 +175,4 @@ dmypy.json
 cython_debug/
 
 student_info.json
+test.py
