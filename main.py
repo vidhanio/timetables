@@ -271,14 +271,14 @@ def generate_student_info(pdf_url: str):
 intents = discord.Intents.all()
 
 # Set prefix.
-bot = commands.Bot(command_prefix="tt!", intents=intents)
+bot = commands.Bot(command_prefix="tt.", intents=intents)
 
 # Read from student_info.json to initialize info.
 with open(join(dirname(__file__), "student_info.json"), "r") as student_info_json:
     student_info = json.load(student_info_json)
 
 
-# tt!set: Set your timetable by uploading it in the same message as the command.
+# tt.set: Set your timetable by uploading it in the same message as the command.
 @bot.command(name="set")
 async def _set(ctx, member: discord.Member = None):
 
@@ -365,7 +365,7 @@ async def compare(ctx, member: discord.Member = None):
                     await ctx.send("Unfortunately, you don't share any courses.")
             else:
                 ctx.send(
-                    "Error: {}'s timetable is not set. Ask them to use `tt!set` to set it. :confused:".format(
+                    "Error: {}'s timetable is not set. Ask them to use `tt.set` to set it. :confused:".format(
                         member.name
                     )
                 )
@@ -429,7 +429,7 @@ async def compare(ctx, member: discord.Member = None):
 
     else:
         await ctx.send(
-            "Error: Your timetable is not set, use `tt!set` to set it. :confused:"
+            "Error: Your timetable is not set, use `tt.set` to set it. :confused:"
         )
 
 
