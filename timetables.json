@@ -1,1 +1,1290 @@
-{"users": {"154705392163749888": {"name": {"first_name": "Phillip", "last_name": "Bosek"}, "student_number": "736802", "courses": [[[[{"course_code": "HSB4U0-A", "teacher": "Ghadially", "room": "212"}, {"course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213"}], [{"course_code": "MDM4U0-A", "teacher": "Popovic", "room": "224"}, {"course_code": "ENG4U0-A", "teacher": "Toney-West", "room": "221"}]], [[{"course_code": "HSB4U0-A", "teacher": "Ghadially", "room": "212"}, {"course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213"}], [{"course_code": "MDM4U0-A", "teacher": "Popovic", "room": "224"}, {"course_code": "ENG4U0-A", "teacher": "Toney-West", "room": "221"}]]], [[[{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "ICS4U0-D", "teacher": "Dutton", "room": "100"}], [{"course_code": "SPH4U0-C", "teacher": "Fong", "room": "126"}, {"course_code": "CIA4U0-A", "teacher": "Ghadially", "room": "212"}]], [[{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "ICS4U0-D", "teacher": "Dutton", "room": "100"}], [{"course_code": "SPH4U0-C", "teacher": "Fong", "room": "126"}, {"course_code": "CIA4U0-A", "teacher": "Ghadially", "room": "212"}]]]]}, "171277891269558274": {"name": {"first_name": "Jeffrey-Kai", "last_name": "Li"}, "student_number": "650484", "courses": [[[[{"course_code": "MHF4UE-B", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]], [[{"course_code": "MHF4UE-B", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]]], [[[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "HFA4U0-C", "teacher": "Wong", "room": "131"}]], [[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "HFA4U0-C", "teacher": "Wong", "room": "131"}]]]]}, "401473495055466497": {"name": {"first_name": "Bruce", "last_name": "Cao"}, "student_number": "660471", "courses": [[[[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205"}]], [[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205"}]]], [[[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "FSF4U0-A", "teacher": "Pils", "room": "211"}]], [[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "FSF4U0-A", "teacher": "Pils", "room": "211"}]]]]}, "498506968021991454": {"name": {"first_name": "Simon", "last_name": "Wu"}, "student_number": "719308", "courses": [[[[{"course_code": "SCH3UE-A", "teacher": "Tan", "room": "130"}, {"course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205"}]], [[{"course_code": "SCH3UE-A", "teacher": "Tan", "room": "130"}, {"course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205"}]]], [[[{"course_code": "ENG4UE-C", "teacher": "Donaghey", "room": "223"}, {"course_code": "STUDY", "teacher": "Study", "room": 0}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]], [[{"course_code": "ENG4UE-C", "teacher": "Donaghey", "room": "223"}, {"course_code": "STUDY", "teacher": "Study", "room": 0}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]]]]}, "186949932824002561": {"name": {"first_name": "Max", "last_name": "Liu"}, "student_number": "659574", "courses": [[[[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]], [[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]]], [[[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]], [[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]]]]}, "489152745513680913": {"name": {"first_name": "Aryan", "last_name": "Nehete"}, "student_number": "684222", "courses": [[[[{"course_code": "SCH3UE-B", "teacher": "Doret", "room": "124"}, {"course_code": "MCR3UE-B", "teacher": "Gershater", "room": "205"}], [{"course_code": "HSP3U0-B", "teacher": "Martin", "room": "209"}, {"course_code": "ENG3UE-A", "teacher": "Bombier", "room": "220"}]], [[{"course_code": "SCH3UE-B", "teacher": "Doret", "room": "124"}, {"course_code": "MCR3UE-B", "teacher": "Gershater", "room": "205"}], [{"course_code": "HSP3U0-B", "teacher": "Martin", "room": "209"}, {"course_code": "ENG3UE-A", "teacher": "Bombier", "room": "220"}]]], [[[{"course_code": "SPH3UE-D", "teacher": "Wyman-McCarthy", "room": "127"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "ICS3U0-C", "teacher": "Heathfield", "room": "100"}, {"course_code": "TDJ3M0-A", "teacher": "Vothknecht", "room": "104"}]], [[{"course_code": "SPH3UE-D", "teacher": "Wyman-McCarthy", "room": "127"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "ICS3U0-C", "teacher": "Heathfield", "room": "100"}, {"course_code": "TDJ3M0-A", "teacher": "Vothknecht", "room": "104"}]]]]}, "259464008262746113": {"name": {"first_name": "Nathan", "last_name": "Chung"}, "student_number": "713026", "courses": [[[[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]], [[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]]], [[[{"course_code": "BAT4M0-A", "teacher": "Wong", "room": "208"}, {"course_code": "MCV4UE-A", "teacher": "Gershater", "room": "205"}], [{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]], [[{"course_code": "BAT4M0-A", "teacher": "Wong", "room": "208"}, {"course_code": "MCV4UE-A", "teacher": "Gershater", "room": "205"}], [{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]]]]}, "323822282533240833": {"name": {"first_name": "Richard", "last_name": "Qi"}, "student_number": "660129", "courses": [[[[{"course_code": "MHF4UE-B", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]], [[{"course_code": "MHF4UE-B", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "CHY4UE-A", "teacher": "Payne", "room": "214"}], [{"course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]]], [[[{"course_code": "MCV4UE-B", "teacher": "Heathfield", "room": "216"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]], [[{"course_code": "MCV4UE-B", "teacher": "Heathfield", "room": "216"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133"}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]]]]}, "277507281652940800": {"name": {"first_name": "Vidhan", "last_name": "Bhatt"}, "student_number": "654492", "courses": [[[[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223", "shared_with": []}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103", "shared_with": []}], [{"course_code": "SBI4UE-C", "teacher": "Lee", "room": "138", "shared_with": []}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205", "shared_with": []}]], [[{"course_code": "ENG4UE-B", "teacher": "Donaghey", "room": "223", "shared_with": []}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103", "shared_with": []}], [{"course_code": "SBI4UE-C", "teacher": "Lee", "room": "138", "shared_with": []}, {"course_code": "MHF4UE-D", "teacher": "Gershater", "room": "205", "shared_with": []}]]], [[[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100", "shared_with": []}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216", "shared_with": []}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133", "shared_with": []}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126", "shared_with": []}]], [[{"course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100", "shared_with": []}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216", "shared_with": []}], [{"course_code": "SCH4UE-B", "teacher": "Williams", "room": "133", "shared_with": []}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126", "shared_with": []}]]]]}, "255084344601870336": {"name": {"first_name": "Ronik", "last_name": "Agarwal"}, "student_number": "681219", "courses": [[[[{"course_code": "ICS4U0-A", "teacher": "Dutton", "room": "100"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]], [[{"course_code": "ICS4U0-A", "teacher": "Dutton", "room": "100"}, {"course_code": "TEJ4M0-A", "teacher": "Williams", "room": "103"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "ENG4UE-A", "teacher": "Donaghey", "room": "223"}]]], [[[{"course_code": "MCV4UE-B", "teacher": "Heathfield", "room": "216"}, {"course_code": "SCH4UE-C", "teacher": "Williams", "room": "133"}], [{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]], [[{"course_code": "MCV4UE-B", "teacher": "Heathfield", "room": "216"}, {"course_code": "SCH4UE-C", "teacher": "Williams", "room": "133"}], [{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "SPH4UE-C", "teacher": "Fong", "room": "126"}]]]]}, "427908627831980034": {"name": {"first_name": "Louise", "last_name": "Meriel"}, "student_number": "649795", "courses": [[[[{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "MHF4UE-C", "teacher": "Mokrytskiy", "room": "225"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]], [[{"course_code": "STUDY", "teacher": "Study", "room": 0}, {"course_code": "MHF4UE-C", "teacher": "Mokrytskiy", "room": "225"}], [{"course_code": "SPH4UE-A", "teacher": "Fong", "room": "126"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]]], [[[{"course_code": "AVI4M0-A", "teacher": "Lascot", "room": "129"}, {"course_code": "HNB4M0-A", "teacher": "Wong", "room": "132"}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]], [[{"course_code": "AVI4M0-A", "teacher": "Lascot", "room": "129"}, {"course_code": "HNB4M0-A", "teacher": "Wong", "room": "132"}], [{"course_code": "MCV4UE-D", "teacher": "Mokrytskiy", "room": "225"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]]]]}, "330080623878471680": {"name": {"first_name": "Daniel", "last_name": "Zhou"}, "student_number": "712731", "courses": [[[[{"course_code": "AMI4M0-A", "teacher": "Koehnen", "room": "145"}, {"course_code": "SPH4UE-B", "teacher": "Fong", "room": "126"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]], [[{"course_code": "AMI4M0-A", "teacher": "Koehnen", "room": "145"}, {"course_code": "SPH4UE-B", "teacher": "Fong", "room": "126"}], [{"course_code": "MHF4UE-A", "teacher": "Gershater", "room": "205"}, {"course_code": "SCH4UE-A", "teacher": "Williams", "room": "133"}]]], [[[{"course_code": "ENG4UE-C", "teacher": "Donaghey", "room": "223"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "HZT4UE-A", "teacher": "Ghadially", "room": "212"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]], [[{"course_code": "ENG4UE-C", "teacher": "Donaghey", "room": "223"}, {"course_code": "MCV4UE-C", "teacher": "Heathfield", "room": "216"}], [{"course_code": "HZT4UE-A", "teacher": "Ghadially", "room": "212"}, {"course_code": "SBI4UE-B", "teacher": "Doret", "room": "124"}]]]]}, "356073853186998273": {"name": {"first_name": "Jack", "last_name": "Huang"}, "student_number": "869787", "courses": [[[[{"course_code": "ENG3UE-B", "teacher": "Bombier", "room": "220"}, {"course_code": "GPP3O0-A", "teacher": "DeBeck", "room": "102"}], [{"course_code": "PPL3O0-A", "teacher": "Grandy", "room": "GYM"}, {"course_code": "STUDY", "teacher": "Study", "room": 0}]], [[{"course_code": "ENG3UE-B", "teacher": "Bombier", "room": "220"}, {"course_code": "GPP3O0-A", "teacher": "DeBeck", "room": "102"}], [{"course_code": "PPL3O0-A", "teacher": "Grandy", "room": "GYM"}, {"course_code": "STUDY", "teacher": "Study", "room": 0}]]], [[[{"course_code": "SPH3UE-D", "teacher": "Wyman-McCarthy", "room": "127"}, {"course_code": "SCH3UE-D", "teacher": "Tan", "room": "130"}], [{"course_code": "MCR3UE-E", "teacher": "Popovic", "room": "224"}, {"course_code": "SBI3UE-C", "teacher": "Raybould", "room": "125"}]], [[{"course_code": "SPH3UE-D", "teacher": "Wyman-McCarthy", "room": "127"}, {"course_code": "SCH3UE-D", "teacher": "Tan", "room": "130"}], [{"course_code": "MCR3UE-E", "teacher": "Popovic", "room": "224"}, {"course_code": "SBI3UE-C", "teacher": "Raybould", "room": "125"}]]]]}, "318837658497581067": {"name": {"first_name": "Catherine", "last_name": "Zhang"}, "student_number": "688328", "courses": [[[[{"course_code": "SCH3UE-A", "teacher": "Tan", "room": "130"}, {"course_code": "SPH3UE-B", "teacher": "Wyman-McCarthy", "room": "127"}], [{"course_code": "MCR3UE-C", "teacher": "Heathfield", "room": "216"}, {"course_code": "ICS3U0-B", "teacher": "Heathfield", "room": "100"}]], [[{"course_code": "SCH3UE-A", "teacher": "Tan", "room": "130"}, {"course_code": "SPH3UE-B", "teacher": "Wyman-McCarthy", "room": "127"}], [{"course_code": "MCR3UE-C", "teacher": "Heathfield", "room": "216"}, {"course_code": "ICS3U0-B", "teacher": "Heathfield", "room": "100"}]]], [[[{"course_code": "TWJ3E0-B", "teacher": "Sargant", "room": "108"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "ENG3UE-D", "teacher": "Tonido-Tsering", "room": "218"}, {"course_code": "SBI3UE-C", "teacher": "Raybould", "room": "125"}]], [[{"course_code": "TWJ3E0-B", "teacher": "Sargant", "room": "108"}, {"course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224"}], [{"course_code": "ENG3UE-D", "teacher": "Tonido-Tsering", "room": "218"}, {"course_code": "SBI3UE-C", "teacher": "Raybould", "room": "125"}]]]]}}}
+{
+  "users": {
+    "154705392163749888": {
+      "name": { "first_name": "Phillip", "last_name": "Bosek" },
+      "student_number": "736802",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "HSB4U0-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213" }
+            ],
+            [
+              {
+                "course_code": "MDM4U0-A",
+                "teacher": "Popovic",
+                "room": "224"
+              },
+              {
+                "course_code": "ENG4U0-A",
+                "teacher": "Toney-West",
+                "room": "221"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "HSB4U0-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213" }
+            ],
+            [
+              {
+                "course_code": "MDM4U0-A",
+                "teacher": "Popovic",
+                "room": "224"
+              },
+              {
+                "course_code": "ENG4U0-A",
+                "teacher": "Toney-West",
+                "room": "221"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "ICS4U0-D", "teacher": "Dutton", "room": "100" }
+            ],
+            [
+              { "course_code": "SPH4U0-C", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "CIA4U0-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              }
+            ]
+          ],
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "ICS4U0-D", "teacher": "Dutton", "room": "100" }
+            ],
+            [
+              { "course_code": "SPH4U0-C", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "CIA4U0-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              }
+            ]
+          ]
+        ]
+      ]
+    },
+    "171277891269558274": {
+      "name": { "first_name": "Jeffrey-Kai", "last_name": "Li" },
+      "student_number": "650484",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "MHF4UE-B",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "MHF4UE-B",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "HFA4U0-C", "teacher": "Wong", "room": "131" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "HFA4U0-C", "teacher": "Wong", "room": "131" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "401473495055466497": {
+      "name": { "first_name": "Bruce", "last_name": "Cao" },
+      "student_number": "660471",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "FSF4U0-A", "teacher": "Pils", "room": "211" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "FSF4U0-A", "teacher": "Pils", "room": "211" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "498506968021991454": {
+      "name": { "first_name": "Simon", "last_name": "Wu" },
+      "student_number": "719308",
+      "courses": [
+        [
+          [
+            [
+              { "course_code": "SCH3UE-A", "teacher": "Tan", "room": "130" },
+              { "course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213" }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ],
+          [
+            [
+              { "course_code": "SCH3UE-A", "teacher": "Tan", "room": "130" },
+              { "course_code": "CLN4U0-A", "teacher": "Gadzala", "room": "213" }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-C",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-C",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "186949932824002561": {
+      "name": { "first_name": "Max", "last_name": "Liu" },
+      "student_number": "659574",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "489152745513680913": {
+      "name": { "first_name": "Aryan", "last_name": "Nehete" },
+      "student_number": "684222",
+      "courses": [
+        [
+          [
+            [
+              { "course_code": "SCH3UE-B", "teacher": "Doret", "room": "124" },
+              {
+                "course_code": "MCR3UE-B",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              { "course_code": "HSP3U0-B", "teacher": "Martin", "room": "209" },
+              { "course_code": "ENG3UE-A", "teacher": "Bombier", "room": "220" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "SCH3UE-B", "teacher": "Doret", "room": "124" },
+              {
+                "course_code": "MCR3UE-B",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              { "course_code": "HSP3U0-B", "teacher": "Martin", "room": "209" },
+              { "course_code": "ENG3UE-A", "teacher": "Bombier", "room": "220" }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "SPH3UE-D",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "ICS3U0-C",
+                "teacher": "Heathfield",
+                "room": "100"
+              },
+              {
+                "course_code": "TDJ3M0-A",
+                "teacher": "Vothknecht",
+                "room": "104"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "SPH3UE-D",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "ICS3U0-C",
+                "teacher": "Heathfield",
+                "room": "100"
+              },
+              {
+                "course_code": "TDJ3M0-A",
+                "teacher": "Vothknecht",
+                "room": "104"
+              }
+            ]
+          ]
+        ]
+      ]
+    },
+    "259464008262746113": {
+      "name": { "first_name": "Nathan", "last_name": "Chung" },
+      "student_number": "713026",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "BAT4M0-A", "teacher": "Wong", "room": "208" },
+              {
+                "course_code": "MCV4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "BAT4M0-A", "teacher": "Wong", "room": "208" },
+              {
+                "course_code": "MCV4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "323822282533240833": {
+      "name": { "first_name": "Richard", "last_name": "Qi" },
+      "student_number": "660129",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "MHF4UE-B",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              { "course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "MHF4UE-B",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "CHY4UE-A", "teacher": "Payne", "room": "214" }
+            ],
+            [
+              { "course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "MCV4UE-B",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "MCV4UE-B",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "255084344601870336": {
+      "name": { "first_name": "Ronik", "last_name": "Agarwal" },
+      "student_number": "681219",
+      "courses": [
+        [
+          [
+            [
+              { "course_code": "ICS4U0-A", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ],
+          [
+            [
+              { "course_code": "ICS4U0-A", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "MCV4UE-B",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              {
+                "course_code": "SCH4UE-C",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ],
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "MCV4UE-B",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              {
+                "course_code": "SCH4UE-C",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ],
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "427908627831980034": {
+      "name": { "first_name": "Louise", "last_name": "Meriel" },
+      "student_number": "649795",
+      "courses": [
+        [
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              {
+                "course_code": "MHF4UE-C",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ],
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              {
+                "course_code": "MHF4UE-C",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              }
+            ],
+            [
+              { "course_code": "SPH4UE-A", "teacher": "Fong", "room": "126" },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "AVI4M0-A", "teacher": "Lascot", "room": "129" },
+              { "course_code": "HNB4M0-A", "teacher": "Wong", "room": "132" }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "AVI4M0-A", "teacher": "Lascot", "room": "129" },
+              { "course_code": "HNB4M0-A", "teacher": "Wong", "room": "132" }
+            ],
+            [
+              {
+                "course_code": "MCV4UE-D",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "330080623878471680": {
+      "name": { "first_name": "Daniel", "last_name": "Zhou" },
+      "student_number": "712731",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "AMI4M0-A",
+                "teacher": "Koehnen",
+                "room": "145"
+              },
+              { "course_code": "SPH4UE-B", "teacher": "Fong", "room": "126" }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "AMI4M0-A",
+                "teacher": "Koehnen",
+                "room": "145"
+              },
+              { "course_code": "SPH4UE-B", "teacher": "Fong", "room": "126" }
+            ],
+            [
+              {
+                "course_code": "MHF4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              },
+              {
+                "course_code": "SCH4UE-A",
+                "teacher": "Williams",
+                "room": "133"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-C",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "HZT4UE-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-C",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "HZT4UE-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "SBI4UE-B", "teacher": "Doret", "room": "124" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "356073853186998273": {
+      "name": { "first_name": "Jack", "last_name": "Huang" },
+      "student_number": "869787",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "ENG3UE-B",
+                "teacher": "Bombier",
+                "room": "220"
+              },
+              { "course_code": "GPP3O0-A", "teacher": "DeBeck", "room": "102" }
+            ],
+            [
+              { "course_code": "PPL3O0-A", "teacher": "Grandy", "room": "GYM" },
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG3UE-B",
+                "teacher": "Bombier",
+                "room": "220"
+              },
+              { "course_code": "GPP3O0-A", "teacher": "DeBeck", "room": "102" }
+            ],
+            [
+              { "course_code": "PPL3O0-A", "teacher": "Grandy", "room": "GYM" },
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "SPH3UE-D",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              },
+              { "course_code": "SCH3UE-D", "teacher": "Tan", "room": "130" }
+            ],
+            [
+              {
+                "course_code": "MCR3UE-E",
+                "teacher": "Popovic",
+                "room": "224"
+              },
+              {
+                "course_code": "SBI3UE-C",
+                "teacher": "Raybould",
+                "room": "125"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "SPH3UE-D",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              },
+              { "course_code": "SCH3UE-D", "teacher": "Tan", "room": "130" }
+            ],
+            [
+              {
+                "course_code": "MCR3UE-E",
+                "teacher": "Popovic",
+                "room": "224"
+              },
+              {
+                "course_code": "SBI3UE-C",
+                "teacher": "Raybould",
+                "room": "125"
+              }
+            ]
+          ]
+        ]
+      ]
+    },
+    "318837658497581067": {
+      "name": { "first_name": "Catherine", "last_name": "Zhang" },
+      "student_number": "688328",
+      "courses": [
+        [
+          [
+            [
+              { "course_code": "SCH3UE-A", "teacher": "Tan", "room": "130" },
+              {
+                "course_code": "SPH3UE-B",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              }
+            ],
+            [
+              {
+                "course_code": "MCR3UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              {
+                "course_code": "ICS3U0-B",
+                "teacher": "Heathfield",
+                "room": "100"
+              }
+            ]
+          ],
+          [
+            [
+              { "course_code": "SCH3UE-A", "teacher": "Tan", "room": "130" },
+              {
+                "course_code": "SPH3UE-B",
+                "teacher": "Wyman-McCarthy",
+                "room": "127"
+              }
+            ],
+            [
+              {
+                "course_code": "MCR3UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              },
+              {
+                "course_code": "ICS3U0-B",
+                "teacher": "Heathfield",
+                "room": "100"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              {
+                "course_code": "TWJ3E0-B",
+                "teacher": "Sargant",
+                "room": "108"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "ENG3UE-D",
+                "teacher": "Tonido-Tsering",
+                "room": "218"
+              },
+              {
+                "course_code": "SBI3UE-C",
+                "teacher": "Raybould",
+                "room": "125"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "TWJ3E0-B",
+                "teacher": "Sargant",
+                "room": "108"
+              },
+              { "course_code": "MDM4UE-B", "teacher": "Popovic", "room": "224" }
+            ],
+            [
+              {
+                "course_code": "ENG3UE-D",
+                "teacher": "Tonido-Tsering",
+                "room": "218"
+              },
+              {
+                "course_code": "SBI3UE-C",
+                "teacher": "Raybould",
+                "room": "125"
+              }
+            ]
+          ]
+        ]
+      ]
+    },
+    "344211080899198977": {
+      "name": { "first_name": "Henri", "last_name": "Kennedy" },
+      "student_number": "689533",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "AMI4M0-A",
+                "teacher": "Koehnen",
+                "room": "145"
+              },
+              {
+                "course_code": "MHF4UE-C",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              }
+            ],
+            [
+              { "course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "AMI4M0-A",
+                "teacher": "Koehnen",
+                "room": "145"
+              },
+              {
+                "course_code": "MHF4UE-C",
+                "teacher": "Mokrytskiy",
+                "room": "225"
+              }
+            ],
+            [
+              { "course_code": "ICS4U0-B", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "ENG4UE-A",
+                "teacher": "Donaghey",
+                "room": "223"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              {
+                "course_code": "MCV4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              {
+                "course_code": "HZT4UE-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "STUDY", "teacher": "Study", "room": 0 },
+              {
+                "course_code": "MCV4UE-A",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ],
+            [
+              {
+                "course_code": "HZT4UE-A",
+                "teacher": "Ghadially",
+                "room": "212"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    },
+    "277507281652940800": {
+      "name": { "first_name": "Vidhan", "last_name": "Bhatt" },
+      "student_number": "654492",
+      "courses": [
+        [
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              { "course_code": "SBI4UE-C", "teacher": "Lee", "room": "138" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ],
+          [
+            [
+              {
+                "course_code": "ENG4UE-B",
+                "teacher": "Donaghey",
+                "room": "223"
+              },
+              {
+                "course_code": "TEJ4M0-A",
+                "teacher": "Williams",
+                "room": "103"
+              }
+            ],
+            [
+              { "course_code": "SBI4UE-C", "teacher": "Lee", "room": "138" },
+              {
+                "course_code": "MHF4UE-D",
+                "teacher": "Gershater",
+                "room": "205"
+              }
+            ]
+          ]
+        ],
+        [
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ],
+          [
+            [
+              { "course_code": "ICS4U0-C", "teacher": "Dutton", "room": "100" },
+              {
+                "course_code": "MCV4UE-C",
+                "teacher": "Heathfield",
+                "room": "216"
+              }
+            ],
+            [
+              {
+                "course_code": "SCH4UE-B",
+                "teacher": "Williams",
+                "room": "133"
+              },
+              { "course_code": "SPH4UE-C", "teacher": "Fong", "room": "126" }
+            ]
+          ]
+        ]
+      ]
+    }
+  }
+}

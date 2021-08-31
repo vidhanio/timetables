@@ -310,7 +310,7 @@ def generate_shared_courses_embed(shared_courses: dict):
 
 def generate_shared_students_embed(courses: dict):
     courses_embed = discord.Embed(
-        title="Courses",
+        title="Classes",
     )
 
     for semester in range(2):
@@ -342,8 +342,12 @@ def generate_shared_students_embed(courses: dict):
                             courses["courses"][semester][term][week][course]["teacher"],
                         ),
                         value=members,
-                        inline=False,
                     )
+
+    courses_embed.set_footer(
+        text="Made with ❤️ by Vidhan",
+        icon_url="https://avatars.githubusercontent.com/u/41439633?",
+    )
     return courses_embed
 
 
@@ -490,7 +494,7 @@ async def compare(ctx, member: discord.Member = None):
 
 
 @bot.command()
-async def compare_courses(ctx):
+async def classes(ctx):
 
     if str(ctx.author.id) in timetables["users"].keys():
         courses = copy.deepcopy(timetables["users"][str(ctx.author.id)])
@@ -523,7 +527,7 @@ async def compare_courses(ctx):
 
         await ctx.author.send(embed=generate_shared_students_embed(courses))
         await ctx.send(
-            embed=success_embed("You will recieve the shared courses in your DMs.")
+            embed=success_embed("You will recieve your classes in your DMs.")
         )
 
     else:
