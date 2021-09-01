@@ -463,6 +463,7 @@ async def unset(ctx, user: discord.User = None):
     if user:
         if ctx.author.id != 277507281652940800:
             await ctx.send(embed=error_embed("You aren't Vidhan, you can't do that."))
+            return
     else:
         user = ctx.author
 
