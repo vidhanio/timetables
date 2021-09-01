@@ -61,12 +61,13 @@ def generate_student_info(pdf_url: str):
                 courses_element = element.get_text()
 
             elif name_found == False:
-                name = {
-                    "first_name": element.get_text().split(", ")[1].strip(),
-                    "last_name": element.get_text().split(", ")[0].strip(),
-                }
+                if "," in element.get_text():
+                    name = {
+                        "first_name": element.get_text().split(", ")[1].strip(),
+                        "last_name": element.get_text().split(", ")[0].strip(),
+                    }
 
-                name_found = True
+                    name_found = True
 
     # Filter list to remove useless text.
     courses_list = list(filter(validate_element, courses_element.split()))
