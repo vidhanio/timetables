@@ -176,3 +176,8 @@ cython_debug/
 
 timetables.json
 test.py
+
+go.*
+*.go
+timetables-bot
+/tmp/

@@ -85,7 +85,7 @@ def generate_student_info(pdf_url: str):
         if words
     ]
 
-    student_number = courses_list.pop(0)
+    pupil_number = courses_list.pop(0)
 
     # Find course codes by matching regex pattern.
     course_codes = list(
@@ -130,7 +130,7 @@ def generate_student_info(pdf_url: str):
     # Initialize student info dictionary.
     student_info = {
         "name": name,
-        "student_number": student_number,
+        "pupil_number": pupil_number,
         "courses": [
             [
                 [
